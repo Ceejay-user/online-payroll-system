@@ -1,0 +1,23 @@
+body.index-page{
+    background: url("../images/image1.jpg") no-repeat;
+    background-size: cover; 
+}
+
+body.emp-page{
+    background: url("../images/image2.jpg") no-repeat;
+    background-size: cover; 
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.div1 {
+    width: 60%;
+    height: 500px;
+    margin: 100px auto;
+    text-align: center;
+}
