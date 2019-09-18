@@ -5,32 +5,21 @@
             "firstname": "Tom",
             "lastname": "Jackson",
             "role": "Manager",
-            "salary": 500
+            "salary-status": "paid"
         },
         {   
             "id": 2,
             "firstname": "ghjfjk",
             "lastname": "knkfkl",
             "role": "ldldfl;",
-            "salary": 900
+            "salary-status": "paid"
         },
         {      
             "id": 3,
             "firstname": "jfkfk",
             "lastname": "kkfflk",
             "role": "mkfkfl",
-            "salary": 20
-        }
-    ],
-    "payment-status": [
-        {
-            "userId": 1, "status": "Paid"
-        },
-        {
-            "userId": 2, "status": "Not paid"
-        },
-        {
-            "userId": 3, "status": "Paid"
+            "salary-status": "paid"
         }
     ]
 }
