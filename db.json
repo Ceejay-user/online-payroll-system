@@ -1,25 +1,17 @@
 {
-  "employees": [
+  "employees": [],
+  "admin": [
     {
-      "firstname": "Tom",
-      "lastname": "Jackson",
-      "role": "Manager",
-      "salary-status": "Not Paid",
+      "name": "Emmanuel Ezeako",
+      "email": "emmanuelezeako@yahoo.com",
+      "password": "55555",
       "id": 1
     },
     {
-      "firstname": "Hello",
-      "lastname": "World",
-      "role": "Welcome note",
-      "salary-status": "Not Paid",
-      "id": 3
-    },
-    {
-      "firstname": "Decagon",
-      "lastname": "Institutes",
-      "role": "Software",
-      "salary-status": "Not Paid",
-      "id": 5
+      "name": "kelechi",
+      "email": "thisiskelechi@gmail.com",
+      "password": "626262",
+      "id": 2
     }
   ]
 }
