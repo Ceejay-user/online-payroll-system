@@ -1,25 +1,25 @@
 {
-    "employees": [
-        {   
-            "id":1,
-            "firstname": "Tom",
-            "lastname": "Jackson",
-            "role": "Manager",
-            "salary-status": "paid"
-        },
-        {   
-            "id": 2,
-            "firstname": "ghjfjk",
-            "lastname": "knkfkl",
-            "role": "ldldfl;",
-            "salary-status": "paid"
-        },
-        {      
-            "id": 3,
-            "firstname": "jfkfk",
-            "lastname": "kkfflk",
-            "role": "mkfkfl",
-            "salary-status": "paid"
-        }
-    ]
+  "employees": [
+    {
+      "firstname": "Tom",
+      "lastname": "Jackson",
+      "role": "Manager",
+      "salary-status": "Not Paid",
+      "id": 1
+    },
+    {
+      "firstname": "Hello",
+      "lastname": "World",
+      "role": "Welcome note",
+      "salary-status": "Not Paid",
+      "id": 3
+    },
+    {
+      "firstname": "Decagon",
+      "lastname": "Institutes",
+      "role": "Software",
+      "salary-status": "Not Paid",
+      "id": 5
+    }
+  ]
 }
