@@ -153,20 +153,20 @@ function update(id) {
     });
 }
 
-// function payEmployee(id) {
-//     $.ajax({
-//         url: 'http://localhost:3000/employees/'+id,
-//         method: 'PUT',
-//         success: function(data) {
-//             data[i]["salary-status"] = 'Paid';
-//             displayAll();
-//             alert('Paid');
-//         },
-//         error: function(error) {
-//             alert(error);
-//         }
-//     });
-// }
+function payEmployee(id) {
+    $.ajax({
+        url: 'http://localhost:3000/employees/'+id,
+        method: 'PUT',
+        success: function(data) {
+            data[i]["salary-status"] = 'Paid';
+            displayAll();
+            alert('Paid');
+        },
+        error: function(error) {
+            alert(error);
+        }
+    });
+}
 
 function reset() {
     $('#hidden').val() = '';
