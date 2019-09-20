@@ -1,5 +1,48 @@
 {
-  "employees": [],
+  "employees": [
+    {
+      "firstname": "Newday",
+      "lastname": "Today",
+      "role": "Winning Everyday Yah",
+      "salary-status": "Paid",
+      "id": 3
+    },
+    {
+      "firstname": "Newday",
+      "lastname": "Today",
+      "role": "Winning Day",
+      "salary-status": "Paid",
+      "id": 5
+    },
+    {
+      "firstname": "Newday",
+      "lastname": "Today",
+      "role": "Winning Day",
+      "salary-status": "Paid",
+      "id": 6
+    },
+    {
+      "firstname": "Ikenna",
+      "lastname": "Agu",
+      "role": "Manager",
+      "salary-status": "Not Paid",
+      "id": 7
+    },
+    {
+      "firstname": "Udochukwu",
+      "lastname": "Emekaene",
+      "role": "Intern",
+      "salary-status": "Paid",
+      "id": 9
+    },
+    {
+      "firstname": "hdjedk",
+      "lastname": "kdl",
+      "role": "lsdlsd",
+      "salary-status": "Paid",
+      "id": 10
+    }
+  ],
   "admin": [
     {
       "name": "Emmanuel Ezeako",
@@ -12,6 +55,18 @@
       "email": "thisiskelechi@gmail.com",
       "password": "626262",
       "id": 2
+    },
+    {
+      "name": "admin",
+      "email": "admin@decagon.com",
+      "password": "11111",
+      "id": 3
+    },
+    {
+      "name": "hello",
+      "email": "hello",
+      "password": "hello",
+      "id": 4
     }
   ]
 }

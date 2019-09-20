@@ -6,7 +6,6 @@ $(document).ready(function(){
     $("#post").click(function(e){
         let input = {firstname: $("#a").val(), lastname: $("#b").val(), role: $("#c").val(), 'salary-status': 'Not Paid'};
         let employeeId = $("#hidden").val();
-        
         if(employeeId){
             //update it
             dynamicURL = 'http://localhost:3000/employees/'+employeeId;
@@ -22,18 +21,9 @@ $(document).ready(function(){
                 url: dynamicURL,
                 data: input,
                 success: function(value){
-                    displayAll();
                     methodName === 'POST' ? alert('New employee created successfuly') : alert('Updated successfully');
-                    
-                //    $("#targ").append('<tr><td>'+
-                //    value["firstname"]+'</td><td>'+
-                //    value["lastname"]+'</td><td>'+
-                //    value["role"]+'</td><td>'+
-                //    value["salary-status"]+'</td><td>'+
-                //    '<button class="btn btn-info">Edit</button>'+
-                //    '<button class="btn btn-info">Pay</button>'+
-                //    '<button class="btn btn-info">Delete</button></td></tr>')
-                
+                    displayAll();
+                    reset();
                 }
             });
             e.preventDefault();
@@ -41,6 +31,22 @@ $(document).ready(function(){
             alert('Please fill the new employee details completely');
         }
     });
+    
+    $('#btnpay').click(function(){
+        let employeeId = $('#aid').val();
+        let payNow = {firstname: $("#afn").val(), lastname: $("#aln").val(), role: $("#arl").val(), 'salary-status': 'Paid'};
+        $.ajax({
+            url: 'http://localhost:3000/employees/'+employeeId,
+            method: 'PUT',
+            data: payNow,
+            success: function() {
+                displayAll();
+            },
+            error: function(error) {
+                alert(error);
+            }
+        });
+    })
   
     $('#part').click(function(){
 		let name = $('#name').val();
@@ -114,7 +120,7 @@ function displayAll() {
                             +data[i]["role"]+'</td><td>'
                             +data[i]["salary-status"]+'</td><td>'
                             +'<button onclick="update(' +data[i]["id"]+ ')" class="btn btn-info">Edit</button>'
-                            +'|<button onclick="payEmployee(' +data[i]["id"]+ ')" class="btn btn-info">Pay</button>'
+                            +'|<button onclick="payEmployee(' +data[i]["id"]+ ')" data-toggle="modal" data-target="#exampleModal"class="btn btn-info">Pay</button>'
                             +'|<button onclick="deleteEmployee(' +data[i]["id"]+ ')" class="btn btn-info">Delete</button></td></tr>'
                 );                             
             });
@@ -156,21 +162,24 @@ function update(id) {
 function payEmployee(id) {
     $.ajax({
         url: 'http://localhost:3000/employees/'+id,
-        method: 'PUT',
-        success: function(data) {
-            data[i]["salary-status"] = 'Paid';
+        method: 'GET',
+        success: function(data){
+            $('#aid').val(data["id"]);
+            $('#afn').val(data["firstname"]);
+            $('#aln').val(data["lastname"]);
+            $('#arl').val(data["role"]);
+            $('#apd').val(data["salary-status"]);
             displayAll();
-            alert('Paid');
         },
-        error: function(error) {
+        error: function (error){
             alert(error);
         }
     });
 }
 
 function reset() {
-    $('#hidden').val() = '';
-    $('#a').val() = '';
-    $('#b').val() = '';
-    $('#c').val() = '';
+    $('#hidden').val('');
+    $('#a').val('');
+    $('#b').val('');
+    $('#c').val('');
 }

@@ -4,7 +4,14 @@ body.index-page{
 }
 
 body.emp-page{
-    background: url("image2.jpg") no-repeat;
+    background
+    : url("image2.jpg") no-repeat;
+    background-size: cover; 
+
+}
+
+#divImg{
+    background: url("image1.jpg") no-repeat;
     background-size: cover; 
 }
 
