@@ -9,30 +9,29 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/18879497c1.js"></script>
-    <title>payroll system</title>
+    <title>online payroll system</title>
   </head>
   <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Ceejay Payroll</a>
+            <a class="navbar-brand" href="#">Dashboard</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="index.html">Home</a>
-                    <a class="nav-item nav-link" href="employees.html">Employees</a> 
+                    <a class="nav-item nav-link" href="employees.html">Our Services</a> 
                     <a class="nav-item nav-link active" href="#">Payments</a>
                 </div>
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link" href="#">Pricing</a>
-                    <a class="nav-item nav-link" href="#">Disabled</a>
+                    <a class="nav-item nav-link" href="index.html">Log out</a>
                 </div>
             </div>
         </nav>
     </header>
     
-    <div>
+    <div id="divImg">
       <div>
         <form enctype="multipart/form-data" action="#">
           <input type="text" name="hidden" id="hidden" hidden>
@@ -60,6 +59,13 @@
             </div>
           </div>
         </form>
+      </div>
+      <div>
+        <input type="text" id="aid" hidden>
+        <input type="text" id="afn" hidden>
+        <input type="text" id="aln" hidden>
+        <input type="text" id="arl" hidden>
+        <input type="text" id="apd" hidden>
       </div>
       <div>
         <button id="part" type="button" class="btn btn-primary">Search By:</button>
@@ -90,19 +96,38 @@
         <p class="text-white" style="margin-top: 15px;">Copyright &copy; Ceejay Payroll Services</p>
         <div class="collapse navbar-collapse">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link active" href="#">Home</a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
+              <a class="nav-item nav-link" href="#">Whatsapp</a>
+              <a class="nav-item nav-link" href="#">LinkedIn</a>
+              <a class="nav-item nav-link" href="#">Twitter</a>
+              <a class="nav-item nav-link" href="#">Facebook</a>
           </div>
         </div>
       </nav>
     </footer>
 
-    
 
-    
-   
+    <!--**********  PAY EMPLOYEE MODAL  **************-->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Confirm Payment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h4>Are you sure you want to make this payment?</h4>
+            <p>This action cannot be reversed once confirmed !!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button id="btnpay" type="button" class="btn btn-primary" data-dismiss="modal">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
    

@@ -2,20 +2,23 @@ $(document).ready(function(){
     $('form').submit(function(e){
         e.preventDefault();
         let email = $("#emailLog").val();
-        let password = parseInt($("#passLog").val());
+        let password = $("#passLog").val();
         $.ajax({
             url: 'http://localhost:3000/admin',
             method: 'GET',
             success: function(data){
+                console.log(password, data[0]['password'])
                 $(data).each(function(i,element){
-                    let status = true;
+                    console.log(i,data.length-1);
+                    let status = 2;
                     if(data[i]["email"] === email && data[i]["password"] === password){
                         window.location.href = 'payments.html';
-                        status = false;
+                        status = 3;
                     }
-                    if(i === data.length-1 && status === true){
-                        alert('Unauthorised Access');
-                    }
+                    //(i === data.length-1 && status === 2) ? alert('Unauthorised Access') : alert('Welcome');
+                    // if(i === data.length-1 && status === false){
+                    //     alert('Unauthorised Access');
+                    // }
                 })
                 
             },
